@@ -10,11 +10,11 @@ public interface AuthorRepository extends CrudRepository<Author, Long>
 {
     @Transactional
     @Modifying
-    @Query(value = "DELETE from bookAuthors where bookid = :bookid")
+    @Query(value = "DELETE from BookAuthors where bookid = :bookid")
     void deleteBookAuthorsByBookId(long bookid);
 
     @Transactional
     @Modifying
-    @Query(value = "INSERT INTO bookAuthors(bookid, authorid) values(:bookid, :authorid)", nativeQuery = true)
+    @Query(value = "INSERT INTO BookAuthors(bookid, authorid) values(:bookid, :authorid)", nativeQuery = true)
     void insertWrote(long bookid, long authorid);
 }

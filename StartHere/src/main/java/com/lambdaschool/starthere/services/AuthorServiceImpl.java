@@ -20,7 +20,7 @@ public class AuthorServiceImpl implements AuthorService
     AuthorRepository authorRepo;
 
     @Override
-    public List<Author> findAll(Pageable pageable)
+    public List<Author> findAll()
     {
         List<Author> list = new ArrayList<>();
         authorRepo.findAll()

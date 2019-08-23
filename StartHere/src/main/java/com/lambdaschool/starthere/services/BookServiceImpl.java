@@ -85,7 +85,7 @@ public class BookServiceImpl implements BookService
 //        }
         if (book.getBookAuthors().size()>0)
         {
-//            authorRepo.deleteWroteByUserId(currentBook.getBookid());
+            authorRepo.deleteBookAuthorsByBookId(currentBook.getBookid());
 
             for (BookAuthors w: book.getBookAuthors())
             {
